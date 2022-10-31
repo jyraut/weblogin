@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form action="{% url 'check_auth' %}" method="post">{% csrf_token %}
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter username" name="uname">
+        <br><br>
+        <label for="psw"><b>password</b></label>
+        <input type="password" placeholder="Enter password" name="psw">
+        <br><br>
+        <button type="submit">Login</button>
+
+
+    </form>
+    <br><br>
+    Click<a href="{% url 'reg' %}">here</a>for login
+</body>
+</html>
